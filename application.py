@@ -6,6 +6,7 @@ from os import environ
 from FlaskWebProject import app
 
 if __name__ == '__main__':
+    app.logger.info('Application loaded successfully')
     HOST = environ.get('SERVER_HOST', 'localhost')
     try:
         PORT = int(environ.get('SERVER_PORT', '5555'))
