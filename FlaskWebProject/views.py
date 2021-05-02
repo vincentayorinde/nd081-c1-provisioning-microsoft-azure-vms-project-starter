@@ -26,7 +26,7 @@ imageSourceUrl = (
 @app.route("/home")
 @login_required
 def home():
-    app.logger.info(f'{current_user.username} logged login successfully')
+    app.logger.warning(f'{current_user.username} logged login successfully')
     user = User.query.filter_by(username=current_user.username).first_or_404()
     posts = Post.query.all()
     return render_template("index.html", title="Home Page", posts=posts)
@@ -66,7 +66,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            app.logger.info('Invalid login attempt')
+            app.logger.warning('Invalid login attempt')
             flash("Invalid username or password")
             return redirect(url_for("login"))
         login_user(user, remember=form.remember_me.data)
