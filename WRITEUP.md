@@ -3,7 +3,7 @@
 ## Available resource option for deploying the app
  
 ###  **Virtual Machine**
- With VM, you get full access to virtual machines, so purchasing af hardware wouldn't be necessary. We can get both Linux and windows.Flexible types and sizes are available. Also support custom images, high availability and scalability. They are more expensive and labor intensive as completed to the App services
+ With VM, you get full access to virtual machines, so purchasing af hardware wouldn't be necessary. We can get both Linux and windows.Flexible types and sizes are available. Also support custom images/
 
  ### **App Service**
  With App Servive, its an http based service for hosting web applications, APIs and mobile backends. It support multiple languages like NodeJS, Java, dotNet Core, Ruby, PHP, and Python, 
@@ -16,7 +16,28 @@ Vertical scaling is such that (there can be increases or decreases in resources 
 
 Horizontally scaling is such that (there can be increases or decreases in the number of VMs instances our app service is running)
 
-Moreover App Service is a PaaS. It has an app services plan that sets the amount of hardware for our application like Dev/Test (free option), Production, Isolated.
+
+
+## **Costs, scalability, availability, and workflow**
+**Cost:** VMs seems to be more expensive compared to Azure app service because its an Infrastructure as a servive. You don't have to worry about purchasing or maintaining hardware. Usually, a designated personel is fully responsible for maintaining the VM, so its also labour intensive.
+
+ On the other hand, Azure app service is a Plartform as a service and its cost varies based on the plan one chooses, the three tier availabe are  Dev/Test (free option), Production, Isolated.
+Therefore, Azure VMs are more expensive to run in comparison to Azure App Service.
+
+
+**Scalability:** Azure VMs enables you to quickly scale up resources to accommodate spikes in demand for your application, then scale resources back down again when activity decreases to save money.
+
+Azure App Service have constraints such as RAM and CPU capacity in comparison to Azure VMs. Hence, Azure VMs are preferred for application development, management and maintenace, which have scope to expand for future purpose.
+
+
+**Availability:** Azure VM Improves business continuity and disaster recovery. this will help in achieving high uptime for the business. 
+
+In comparison, App Service provides framework that developers can build upon to develop or customize cloud-based applications using built-in software components. Here the availabilty is limited to the capacity of plan that is used.
+
+
+**Workflow:** Azure VMs gives us a full control of the OS or customer software, they are excellent choice for testing and development, one can quickly spin up different OSs and application configurations and turn them down once, they are no longer needed. 
+
+On the other hand app service helps us deploy lightweight applications and services with low performance compute with use case of 14GB of RAM and less than 4 virtual CPUs
 
 
 ## **Why i chose App Service**
